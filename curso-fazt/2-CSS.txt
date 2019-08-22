@@ -1,0 +1,174 @@
+https://www.youtube.com/watch?v=W6GTDfrWjXs
+www.color-hex.com
+www.flatuicolors.com
+DISEÑO WEB RESPONSIVE-SIGUIENTE VIDEO
+
+CSS
+
+
+-Diseño UX y UI: Estudia la experiencia y el diseño de interfaces de Usuario
+
+Como arreglar el diseño de html, para eso utilizamos CSS: Cascading Style Sheets//hojas de estilo en cascada
+
+REGLAS PARA DECIRLE AL NAVEGADOR COMO DEBE PINTAR NUESTRA PAGINA WEB
+Inline Styles//dentro de la propia etiqueta le agreo el estilo
+etiqueta style="background: orange"//pinta el fondo (background)de color naranja (orange)
+style="color: blue"//pinta las letras (color) de color azul (blue)
+se pueden conbinar mediante un punto y coma EJ:
+ style="color: white; background: black"
+
+
+DENTRO DE  <head>://recordar que lo unico que vemos de la etiqueta head es el titulo<title>
+
+<style>
+podemos escribir las reglas de css que nos parezacan
+debo decir que elementos van a ser afectados por esta regla
+nombre de etiqueta y luego abrimos y cerramos llaves ej
+header{
+        background: black;
+}
+</style>
+
+
+SELECTORES CSS//La ,amera de seleccionar los elementos que queremos estilizar
+
+atributo id//es como un identificador unico
+ej:
+<header id="cabecera">
+
+
+DENTRO DE <STYLE>//AFECTAMOS POR id tener encuenta #
+#cabecera{
+                    background: black;
+                    color:white;
+}
+
+LAS CLASES SE PUEDEN UTILIZAR EN MULTIPLES ELEMENTOS CONTRARIO A LOS ID
+atributo class="green"//puede ser reutilizado
+<header class="green">
+
+
+DENTRO DE <STYLE>//AFECTAMOS POR .green tener encuenta  el punto
+.green{
+	background="green";
+}
+
+
+
+
+SELECTOR UNIVERSAL*
+CON * SELECCIONA TODOS LOS ELEMENTOS E INCLUSO EL FONDO DE MI PAGINA
+*{
+    	background: green;
+}
+se utiliza mayormente para quitar margenes del navegador, QUITAR EL ESPACIADO POR DEFECTO DEL NAVEGADOR ETC.
+
+
+AFECTAR al elemento POR ATRIBUTO
+ejemplo://si el elemento blockquote no tiene el atributo cite no lo afectara
+blockquote[cite]{
+	background: red;
+}
+quiero alterar todos
+
+CREAMOS UN archivo PARA AGREGAR ESTILOS A NUESTRA PAGINA
+estilos.css// y en nuestro index.html lo enlazamos mediate el elemento link
+atributo rel//relacion
+<Link rel="stylesheet" href="estilos.css">//voy a llamar un archivo externo del tipo oja de estilo(stylesheet) y como se llama? href(estilos.css)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TAMAÑO DE FUENTE
+ej:
+h1 {
+        font-size: 20px;//permite cambiar el tamaño
+}
+
+TIPO DE FUENTE
+
+       font-family: san-serif;
+
+RESALTAR LA FUENTE//peso
+
+font-weight: blod /lighter;//bold queda remarcado como si fuera en negrita
+
+COMO PUEDO ESCRIBIR EL CODIGO... EJE:2 MANERAS
+h1 {
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+ 
+}
+
+h2 {
+    font: bold 14px sans-serif ;
+}
+
+
+RESALTAR LOS BLOQUES
+header, section, footer, aside, nav, article {
+    border: 1px solid black;
+}
+//LAS ETIQUETAS DE PARRAFO ESTAN EN LINEA POR ESO NO SE COLOCAN UNA DEBAJO DE LA OTRA
+
+ALINEAMOS TODOS LOS TEXTOS DENTRO DE BODY
+body{
+    text-align: center;
+
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DENTRO DE NUESTRO HTML PODEMOS AGREGAR MAS DIVISIONES PARA HACER ESA PEQUEÑA SEPARACION GRIS
+<div>//este elemento no le dice nada al navegador, o sea que no le dan informacion, pero a su vez es un elemento en bloque ya que esta siendo afectado por todo
+
+AGREGAMOS DIV PARA AGREGAR UN ELEMENTO MAS A NUESTRO CONTENIDO
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+margin://espcio de afuera
+padding//espacio de adentro
+siempre respecto de los bordes
+----imagen con el siguiente nombre=padding-border-margin.jpg--------------
+
+
+RESETEAMOS LOS MARGENES DEL NAVEGADOR Y EMPEZAMOS A MODIFICARLOS:
+*{
+    margin: 0;
+    padding: 0;
+
+
+
+----------------COMENTARIOS--------------------------
+.menu{
+    background: #ccc;
+    padding: 5px 15px;//hacia arriba y hacia abajo tengo 5px y a los costados 15px;
+}
+}
+
+-----------------------------COMO ELIMINAR LOS PUNTOS DE LOS <li>EN MI BLOQUE DE NAVEGACION-------------------------------------------
+QUIERO ESTILIZAR TODOS LOS ELEMENTOS li que esten dentro de un ul y que esten dentro de una etiqueta nav
+QUIERO ESTILIZAR TODOS LOS ELEMENTOS LI QUE ESTEN DENTRO DE LA CLASE MENU
+.menu li
+{
+ 	list-style: none;//los estilos de la lista, no quiero ninguno
+	 padding: 5px;//espaciado interno en cada uno de estos li
+ 	font: bold 14px verdana;//estilo de fuente
+	   display: inline-block;//para poner la navegacion una opcion al lado de otra
+						//puedo agregar border para ver los bloques
+
+}
+
+PARA DISTINGUIR BIEN DE QUE MANERA LO ESTOY MODIFICANDO
+.seccion {
+    margin: 20px;
+    width: 600px;
+    border: 1px solid black;
+    float: left;
+    background: orange;
+}
+.columna{
+    margin: 20px 0;
+    width: 300px;
+    float: left;
+    border: 1px solid black;
+    background: orange;
+
+}
